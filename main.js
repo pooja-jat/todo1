@@ -9,6 +9,7 @@ input.addEventListener("keypress", function (event) {
     listItem.className = "todo-item";
 
     listItem.textContent = task;
+
     const deleteBtn = document.createElement("button");
     deleteBtn.className = "deleteBtn";
     deleteBtn.textContent = "Delete";
@@ -17,11 +18,8 @@ input.addEventListener("keypress", function (event) {
       listItem.remove();
     };
 
-
-listItem.appendChild(deleteBtn);
-todoList.appendChild(listItem);
-input.value = "";
-
-
-}
+    listItem.appendChild(deleteBtn);
+    todoList.appendChild(listItem);
+    input.value = "";
+  }
 });
